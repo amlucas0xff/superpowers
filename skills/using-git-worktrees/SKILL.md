@@ -215,3 +215,10 @@ Ready to implement auth feature
 **Pairs with:**
 - **finishing-a-development-branch** - REQUIRED for cleanup after work complete
 - **executing-plans** or **subagent-driven-development** - Work happens in this worktree
+
+## Enhanced User Skills
+
+If available, consider using the **worktree-manager-skill (user)** skill which provides comprehensive git worktree management with:
+- Slash commands for creating, listing, and removing worktrees (/create_worktree, /list_worktrees, /remove_worktree)
+- Automatic port uniqueness and environment configuration
+- Comprehensive error handling and cleanup

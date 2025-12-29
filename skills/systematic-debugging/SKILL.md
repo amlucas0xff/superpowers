@@ -287,6 +287,11 @@ These techniques are part of systematic debugging and available in this director
 - **superpowers:test-driven-development** - For creating failing test case (Phase 4, Step 1)
 - **superpowers:verification-before-completion** - Verify fix worked before claiming success
 
+**Enhanced user skills (if available):**
+- **root-cause-tracing (user)** - Use for detailed backward tracing through call stack with stack trace instrumentation
+- **snoop-tracer (user)** - Use for Python debugging with narrative mode execution tracing
+- **sequential-thinking (user)** - Use the MCP tool for complex multi-step debugging requiring hypothesis revision
+
 ## Real-World Impact
 
 From debugging sessions:

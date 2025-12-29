@@ -114,3 +114,11 @@ After saving the plan, offer execution choice:
 **If Parallel Session chosen:**
 - Guide them to open new session in worktree
 - **REQUIRED SUB-SKILL:** New session uses superpowers:executing-plans
+
+## Enhanced User Skills
+
+If available, consider using these user skills when writing plans:
+
+- **sequential-thinking (user)** - Use the MCP tool for complex planning that requires multi-stage analysis with ability to revise and branch
+- **gemini-cli-integration (user)** - Use for analyzing large codebases (50+ files) to understand existing architecture before planning new features
+- **conventional-commit-messages (user)** - Reference when planning commit structure for the implementation

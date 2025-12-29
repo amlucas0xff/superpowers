@@ -103,3 +103,12 @@ You: [Fix progress indicators]
 - Request clarification
 
 See template at: requesting-code-review/code-reviewer.md
+
+## Enhanced User Skills
+
+If available, consider using the **code-review (user)** skill which provides a comprehensive code review framework covering:
+- **Receiving feedback** - Technical evaluation over performative agreement
+- **Requesting reviews** - Systematic review via code-reviewer subagent
+- **Verification gates** - Evidence before any completion claims
+
+The user skill emphasizes technical rigor: verify before implementing, ask before assuming, evidence before claims.

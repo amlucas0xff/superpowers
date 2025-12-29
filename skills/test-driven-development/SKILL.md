@@ -369,3 +369,9 @@ Otherwise → not TDD
 ```
 
 No exceptions without your human partner's permission.
+
+## Enhanced User Skills
+
+If available, consider using these user skills for stricter TDD governance:
+
+- **tdd-process (user)** - Provides a strict TDD state machine with explicit state announcements (RED/GREEN/REFACTOR/VERIFY) and mandatory validation gates before each transition. Use when you need more rigorous enforcement of TDD discipline.

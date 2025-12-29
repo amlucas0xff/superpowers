@@ -653,3 +653,11 @@ Same cycle: RED (baseline) → GREEN (write skill) → REFACTOR (close loopholes
 Same benefits: Better quality, fewer surprises, bulletproof results.
 
 If you follow TDD for code, follow it for skills. It's the same discipline applied to documentation.
+
+## Enhanced User Skills
+
+If available, consider using these user skills when writing skills:
+
+- **writing-for-llms (user)** - Apply research-backed prompt engineering principles for effective LLM instructions in skill documentation
+- **prompt-factory (user)** - For generating production-ready prompts with quality validation gates when skills need embedded prompts
+- **skill-creator (user)** - Alternative skill creation guide following best practices

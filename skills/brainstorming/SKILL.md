@@ -52,3 +52,11 @@ Start by understanding the current project context, then ask questions one at a 
 - **Explore alternatives** - Always propose 2-3 approaches before settling
 - **Incremental validation** - Present design in sections, validate each
 - **Be flexible** - Go back and clarify when something doesn't make sense
+
+## Enhanced User Skills
+
+If available, consider using these user skills during brainstorming:
+
+- **sequential-thinking (user)** - Use the MCP tool for complex problems requiring systematic step-by-step reasoning with ability to revise thoughts and branch into alternative approaches
+- **writing-for-llms (user)** - Apply research-backed prompt engineering principles when crafting design documents or specifications
+- **gemini-cli-integration (user)** - Use for analyzing large codebases (50+ files) when understanding existing architecture before designing new features

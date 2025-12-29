@@ -137,3 +137,7 @@ From 24 failure memories:
 Run the command. Read the output. THEN claim the result.
 
 This is non-negotiable.
+
+## Enhanced User Skills
+
+If available, the **verification-before-completion (user)** skill provides an equivalent implementation. Both enforce the same core principle: evidence before claims, always.

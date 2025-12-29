@@ -238,3 +238,11 @@ Done!
 
 **Alternative workflow:**
 - **superpowers:executing-plans** - Use for parallel session instead of same-session execution
+
+## Enhanced User Skills
+
+If available, consider using these user skills for subagent-driven development:
+
+- **code-review (user)** - Comprehensive code review framework with receiving feedback protocol, verification gates, and technical rigor emphasis
+- **agent-factory (user)** - For generating custom agents and sub-agents with enhanced YAML frontmatter and tool access patterns
+- **systematic-debugging (user)** - Four-phase debugging framework if subagent encounters bugs during implementation
