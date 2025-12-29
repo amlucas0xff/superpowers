@@ -661,3 +661,11 @@ If available, consider using these user skills when writing skills:
 - **writing-for-llms (user)** - Apply research-backed prompt engineering principles for effective LLM instructions in skill documentation
 - **prompt-factory (user)** - For generating production-ready prompts with quality validation gates when skills need embedded prompts
 - **skill-creator (user)** - Alternative skill creation guide following best practices
+
+## Optional Follow-up Actions
+
+After completing a skill, ask the user if they would like to:
+
+- **Generate CLAUDE.md**: "Would you like me to generate or update the project's CLAUDE.md file?" If yes, spawn an agent using **claude-md-enhancer (user)** skill to create/enhance the CLAUDE.md file with proper structure and best practices.
+
+- **Create related hooks**: "Would you like me to create Claude Code hooks to enforce this skill's patterns?" If yes, spawn an agent using **hook-factory (user)** skill to generate production-ready hooks that complement the skill.

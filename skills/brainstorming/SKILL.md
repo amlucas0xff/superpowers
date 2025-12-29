@@ -60,3 +60,10 @@ If available, consider using these user skills during brainstorming:
 - **sequential-thinking (user)** - Use the MCP tool for complex problems requiring systematic step-by-step reasoning with ability to revise thoughts and branch into alternative approaches
 - **writing-for-llms (user)** - Apply research-backed prompt engineering principles when crafting design documents or specifications
 - **gemini-cli-integration (user)** - Use for analyzing large codebases (50+ files) when understanding existing architecture before designing new features
+- **frontend-design (user)** - When brainstorming involves UI/UX design, use this skill to create distinctive, production-grade frontend interfaces with high design quality
+
+## Optional Follow-up Actions
+
+After completing the design phase, ask the user if they would like to:
+
+- **Create formal documentation**: "Would you like me to help co-author detailed documentation for this design?" If yes, spawn an agent using **doc-coauthoring (user)** skill to guide through a structured workflow for creating comprehensive documentation, proposals, or technical specs.

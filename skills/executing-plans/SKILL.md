@@ -74,3 +74,9 @@ After all tasks complete and verified:
 - Reference skills when plan says to
 - Between batches: just report and wait
 - Stop when blocked, don't guess
+
+## Enhanced User Skills
+
+If available, consider using these user skills during plan execution:
+
+- **sequential-thinking (user)** - Use the MCP tool when executing complex steps that require systematic reasoning, hypothesis verification, or when you need to revise your approach mid-execution

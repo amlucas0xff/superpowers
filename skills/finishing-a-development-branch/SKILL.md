@@ -198,3 +198,9 @@ git worktree remove <worktree-path>
 
 **Pairs with:**
 - **using-git-worktrees** - Cleans up worktree created by that skill
+
+## Enhanced User Skills
+
+If available, consider using these user skills when finishing branches:
+
+- **conventional-commit-messages (user)** - When creating commits for merge or PR, use this skill to ensure proper conventional commit format with type prefixes (feat, fix, refactor, etc.), explanatory body text for non-trivial changes, and issue references
