@@ -11,6 +11,30 @@ Help turn ideas into fully formed designs and specs through natural collaborativ
 
 Start by understanding the current project context, then ask questions one at a time to refine the idea. Once you understand what you're building, present the design in small sections (200-300 words), checking after each section whether it looks right so far.
 
+## Beads Detection
+
+**At the start of brainstorming, detect if beads is active:**
+
+```bash
+# Check both conditions
+if [ -d ".beads" ] && command -v bd &> /dev/null; then
+  echo "BEADS_ACTIVE"
+fi
+```
+
+- If **beads active**: The pipeline chains through `plan-to-epic` and `epic-executor`
+- If **no beads**: The pipeline uses TodoWrite-based execution (standard flow)
+
+**Pipeline with beads:**
+```
+Brainstorming -> Design Doc -> Write Plan -> plan-to-epic -> epic-executor
+```
+
+**Pipeline without beads:**
+```
+Brainstorming -> Design Doc -> Write Plan -> executing-plans (TodoWrite)
+```
+
 ## The Process
 
 **Understanding the idea:**
@@ -43,6 +67,32 @@ Start by understanding the current project context, then ask questions one at a 
 - Ask: "Ready to set up for implementation?"
 - Use superpowers:using-git-worktrees to create isolated workspace
 - Use superpowers:writing-plans to create detailed implementation plan
+
+### Beads-Active Pipeline Continuation
+
+**After writing-plans completes (when beads is active):**
+
+1. **Plan Review Checkpoint:**
+   ```
+   Implementation plan saved: docs/plans/YYYY-MM-DD-<topic>-plan.md
+
+   Tasks: <N>
+   Estimated complexity: <low/medium/high based on task count>
+
+   Review the plan. Ready to create beads epic?
+   ```
+   Wait for user approval.
+
+2. **Epic Creation:**
+   - Use superpowers:plan-to-epic with the plan file
+   - Optionally include design doc: `--design docs/plans/YYYY-MM-DD-<topic>-design.md`
+   - Creates epic with tasks, dependencies, and acceptance criteria
+
+3. **Execution:**
+   - Ask: "Epic created: <epic-id>. Ready to start execution?"
+   - Use superpowers:epic-executor to run tasks with subagent workflow
+   - Two-stage review per task (spec compliance + code quality)
+   - Loops until epic 100% complete
 
 ## Key Principles
 

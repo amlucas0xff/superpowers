@@ -95,6 +95,42 @@ Fetch and follow instructions from https://raw.githubusercontent.com/obra/superp
 
 **The agent checks for relevant skills before any task.** Mandatory workflows, not suggestions.
 
+## Beads Integration (Optional)
+
+Superpowers auto-detects [beads](https://github.com/steveyegge/beads) for persistent task tracking:
+
+```
+.beads/ exists + bd CLI available → beads mode
+otherwise → TodoWrite mode (default)
+```
+
+**With beads active:**
+```
+brainstorming → writing-plans → plan-to-epic → epic-executor
+                                (bd create)    (bd-tracked execution)
+```
+
+**Without beads:**
+```
+brainstorming → writing-plans → executing-plans (TodoWrite)
+```
+
+**To enable beads:**
+```bash
+# Install beads CLI
+npm install -g @beads/bd
+
+# Initialize in your project
+bd init
+
+# Optional: Install SessionStart hook for automatic context
+bd setup claude
+```
+
+**Additional skills when beads is active:**
+- **plan-to-epic** - Converts plans to beads epics with tasks and dependencies
+- **epic-executor** - Executes epics with subagent workflow and two-stage review
+
 ## What's Inside
 
 ### Skills Library
@@ -106,7 +142,7 @@ Fetch and follow instructions from https://raw.githubusercontent.com/obra/superp
 - **systematic-debugging** - 4-phase root cause process (includes root-cause-tracing, defense-in-depth, condition-based-waiting techniques)
 - **verification-before-completion** - Ensure it's actually fixed
 
-**Collaboration** 
+**Collaboration**
 - **brainstorming** - Socratic design refinement
 - **writing-plans** - Detailed implementation plans
 - **executing-plans** - Batch execution with checkpoints
@@ -116,6 +152,10 @@ Fetch and follow instructions from https://raw.githubusercontent.com/obra/superp
 - **using-git-worktrees** - Parallel development branches
 - **finishing-a-development-branch** - Merge/PR decision workflow
 - **subagent-driven-development** - Fast iteration with two-stage review (spec compliance, then code quality)
+
+**Beads Integration** (requires beads CLI)
+- **plan-to-epic** - Convert implementation plans to beads epics
+- **epic-executor** - Execute beads epics with subagent workflow
 
 **Meta**
 - **writing-skills** - Create new skills following best practices (includes testing methodology)

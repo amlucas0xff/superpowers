@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "#!/bin/bash\n\n# beads-bridge: Automatically prime beads context or suggest initialization\n# Part of superpowers skill integration\n\n# Check if beads CLI is available\nif ! command -v bd &> /dev/null; then\n    # bd not installed - silent exit (user may not want beads)\n    exit 0\nfi\n\n# Check if this project has beads initialized\nif [ -d \".beads\" ]; then\n    # Beads is active - run prime to inject workflow context\n    bd prime 2>/dev/null || exit 0\nelse\n    # Beads CLI available but project not initialized\n    echo \"[Beads Available] This project doesn't use beads yet.\"\n    echo \"\"\n    echo \"Beads provides persistent task tracking for long-horizon development.\"\n    echo \"To enable: bd init\"\n    echo \"To enable (stealth mode, no git commits): bd init --stealth\"\n    echo \"\"\n    echo \"Once enabled, superpowers skills will automatically use beads for:\"\n    echo \"  - plan-to-epic: Convert plans to tracked epics\"\n    echo \"  - epic-executor: Execute with persistent state\"\n    echo \"\"\n    echo \"Learn more: https://github.com/steveyegge/beads\"\nfi",
+        "timeout": 10000
+      }
+    ]
+  }
+}

@@ -13,6 +13,24 @@ Load plan, review critically, execute tasks in batches, report for review betwee
 
 **Announce at start:** "I'm using the executing-plans skill to implement this plan."
 
+## Beads Detection
+
+**At the start, detect if beads is active:**
+
+```bash
+# Check both conditions
+if [ -d ".beads" ] && command -v bd &> /dev/null; then
+  echo "BEADS_ACTIVE"
+fi
+```
+
+**If beads active:**
+- Suggest: "Beads detected. Consider using superpowers:epic-executor for persistent task tracking. Continue with TodoWrite-based execution?"
+- If user wants epic-executor: Guide them to first run `plan-to-epic` then `epic-executor`
+- If user wants to continue: Proceed with standard TodoWrite-based execution below
+
+**If no beads:** Proceed directly with the process below.
+
 ## The Process
 
 ### Step 1: Load and Review Plan

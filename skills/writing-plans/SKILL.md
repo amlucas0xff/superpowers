@@ -9,6 +9,20 @@ description: Use when you have a spec or requirements for a multi-step task, bef
 
 Write comprehensive implementation plans assuming the engineer has zero context for our codebase and questionable taste. Document everything they need to know: which files to touch for each task, code, testing, docs they might need to check, how to test it. Give them the whole plan as bite-sized tasks. DRY. YAGNI. TDD. Frequent commits.
 
+## Beads Detection
+
+**At the start, detect if beads is active:**
+
+```bash
+# Check both conditions
+if [ -d ".beads" ] && command -v bd &> /dev/null; then
+  echo "BEADS_ACTIVE"
+fi
+```
+
+- If **beads active**: Handoff chains to `plan-to-epic` then `epic-executor`
+- If **no beads**: Handoff offers subagent-driven or parallel session with `executing-plans`
+
 Assume they are a skilled developer, but know almost nothing about our toolset or problem domain. Assume they don't know good test design very well.
 
 **Announce at start:** "I'm using the writing-plans skill to create the implementation plan."
@@ -96,7 +110,20 @@ git commit -m "feat: add specific feature"
 
 ## Execution Handoff
 
-After saving the plan, offer execution choice:
+After saving the plan, the handoff depends on beads detection:
+
+### If Beads Active
+
+**"Plan complete and saved to `docs/plans/<filename>.md`.**
+
+**Ready to create beads epic for persistent task tracking?"**
+
+**If yes:**
+- **REQUIRED SUB-SKILL:** Use superpowers:plan-to-epic with the plan file
+- Creates epic with tasks, dependencies, acceptance criteria
+- Then offer to start execution with superpowers:epic-executor
+
+### If No Beads (Standard Flow)
 
 **"Plan complete and saved to `docs/plans/<filename>.md`. Two execution options:**
 
