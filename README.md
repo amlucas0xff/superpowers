@@ -1,5 +1,22 @@
 # Superpowers
 
+> [!NOTE]
+> **This is a fork of [obra/superpowers](https://github.com/obra/superpowers)**
+>
+> **Fork customizations:**
+> - **Opus model enforced** in all agents and commands
+> - **Beads integration** - Optional persistent task tracking with [beads](https://github.com/steveyegge/beads)
+> - **New skills**: `plan-to-epic`, `epic-executor` for beads workflow
+> - **SessionStart hook** - Auto-primes beads context or suggests initialization
+> - **User skills integrated** - References to `~/.claude/skills/` throughout
+> - **No `disable-model-invocation`** - AI can invoke skills via Skill tool
+>
+> **Install from fork:**
+> ```bash
+> /plugin marketplace add amlucas0xff/superpowers-marketplace
+> /plugin install superpowers@amlucas-superpowers-marketplace
+> ```
+
 Superpowers is a complete software development workflow for your coding agents, built on top of a set of composable "skills" and some initial instructions that make sure your agent uses them.
 
 ## How it works
